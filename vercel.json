@@ -1,0 +1,17 @@
+{
+  "framework": null,
+  "buildCommand": "",
+  "installCommand": "npm install --omit=dev --no-audit --no-fund",
+  "outputDirectory": "public",
+  "regions": ["bom1"],
+  "functions": {
+    "api/*.js": { "includeFiles": "api/_lib/seed-problems.json", "maxDuration": 15 }
+  },
+  "rewrites": [
+    { "source": "/((?!api/|vendor/|js/|css/|assets/|favicon).*)", "destination": "/index.html" }
+  ],
+  "headers": [
+    { "source": "/api/(.*)", "headers": [{ "key": "Cache-Control", "value": "no-store" }] },
+    { "source": "/vendor/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800, immutable" }] }
+  ]
+}

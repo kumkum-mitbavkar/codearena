@@ -1,0 +1,28 @@
+# dependencies and build output
+node_modules/
+public/vendor/
+
+# local data
+.data/
+
+# environment and secrets
+.env
+.env.*
+
+# deployment metadata
+.vercel/
+
+# test output
+tests/e2e/out/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# logs and caches
+*.log
+npm-debug.log*
+__pycache__/
+*.pyc

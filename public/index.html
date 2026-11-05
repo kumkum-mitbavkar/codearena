@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>CodeArena · Coding practice and contests</title>
+  <meta name="description" content="Practise placement-style coding problems in Python and JavaScript, run real code in the browser, and compete in live two-hour sprints.">
+  <meta name="theme-color" content="#0e0f11">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;450;500;550;600;650;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/css/app.css">
+  <script>
+    // apply the saved theme before first paint so there is no flash
+    // dark is the default; a saved choice wins
+    let t = 'dark'; try { t = localStorage.getItem('ca-theme') || 'dark'; } catch {}
+    document.documentElement.dataset.theme = t;
+  </script>
+</head>
+<body>
+  <header class="top" id="top"></header>
+  <main id="app" aria-live="polite"></main>
+  <footer class="footer" id="footer">
+    <div class="footer-in">
+      <div class="footer-brand"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 6 3 12l5.5 6M15.5 6 21 12l-5.5 6"/></svg></span><span>Built by <a href="https://kumkummitbavkar.vercel.app" target="_blank" rel="noopener">Kumkum Mitbavkar</a></span></div>
+      <span class="footer-note">Code runs in your browser (Python via WebAssembly). Players and activity marked <b>Sample</b> are demo data.</span>
+    </div>
+  </footer>
+  <nav class="tabbar" id="tabbar" aria-label="Sections"></nav>
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>
